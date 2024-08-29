@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.setup-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #444;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 2px solid #FF5722;
+    width: 100px;
+    text-align: center;
+    background-color: #333;
+    color: #FFF;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #FF5722;
+    background-color: #444;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FF5722;
+    color: white;
+    width: 100px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #E64A19; /* Hover rengi */
+}
+
+.chess-clock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 10px;
+    font-size: 4rem;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white; /* Metin rengi */
+    user-select: none;
+    touch-action: manipulation;
+    transition: background-color 0.3s ease;
+}
+
+.clock.top {
+    transform: rotate(180deg);
+}
+
+.clock.inactive {
+    background-color: rgba(0, 0, 0, 0.3); /* Soluk renk */
+}
+
+/* Mobil uyumlu düzenlemeler */
+@media (max-width: 768px) {
+    .setup-screen {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    input[type="number"] {
+        width: 80px;
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 80px;
+        font-size: 0.9rem;
+    }
+
+    .chess-clock {
+        height: 70%;
+    }
+
+    .clock {
+        font-size: 3rem;
+        padding: 5px;
+    }
+}

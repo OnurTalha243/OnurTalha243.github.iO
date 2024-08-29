@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satranç Saati</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="blob.jpeg" type="image/x-icon">
+</head>
+<body>
+    <div id="setupScreen" class="setup-screen">
+        <label for="minutes">
+            <span>Dakika Giriniz</span>
+            <input type="number" id="minutes" min="1" max="60" value="5">
+        </label>
+        <button id="startButton">Başlat</button>
+    </div>
+    <div id="chessClock" class="chess-clock" style="display:none;">
+        <div class="clock top" id="clock1" onclick="switchClock(1)">
+            <span class="time" id="time1">05:00</span>
+        </div>
+        <div class="clock bottom" id="clock2" onclick="switchClock(2)">
+            <span class="time" id="time2">05:00</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
